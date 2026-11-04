@@ -3,8 +3,8 @@ Description=Raspberry PI to Home Assistant bridge through MQTT for wired sensors
 After=network-online.target
 Wants=network-online.target
 
-StartLimitIntervalSec=500
-StartLimitBurst=5
+#StartLimitIntervalSec=500
+#StartLimitBurst=5
 
 [Service]
 Type=simple

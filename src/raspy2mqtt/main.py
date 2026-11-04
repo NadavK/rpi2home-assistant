@@ -179,9 +179,10 @@ async def main_loop():
     homeassistant_status_tracker = HomeAssistantStatusTracker()
     stats_collector = StatsCollector([opto_inputs_handler, gpio_inputs_handler, gpio_outputs_handler])
 
-    button_instances = init_hardware(cfg)
-    button_instances += opto_inputs_handler.init_hardware(cfg)
-    button_instances += gpio_inputs_handler.init_hardware(cfg, loop)
+    button_instances = []
+    #button_instances += init_hardware(cfg)
+    #button_instances += opto_inputs_handler.init_hardware(cfg)
+    #button_instances += gpio_inputs_handler.init_hardware(cfg, loop)
     gpio_outputs_handler.init_hardware(cfg)
 
     homeassistant_status_tracker.set_discovery_publish_coroutines(

@@ -164,10 +164,10 @@ class AppConfig:
                 f"Invalid GPIO index {idx}. The legal range is [1-40] since the Raspberry GPIO connector is a 40-pin connector."
             )
         # some GPIO pins are reserved and cannot be configured!
-        if idx in reserved_gpios:
-            raise ValueError(
-                f"Invalid GPIO index {idx}: that GPIO pin is reserved for communication with the Sequent Microsystem HAT. Choose a different GPIO."
-            )
+        #if idx in reserved_gpios:
+        #    raise ValueError(
+        #        f"Invalid GPIO index {idx}: that GPIO pin is reserved for communication with the Sequent Microsystem HAT. Choose a different GPIO."
+        #    )
 
     def populate_defaults_in_list_entry(
         self,
